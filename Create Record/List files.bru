@@ -1,0 +1,15 @@
+meta {
+  name: List files
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseURL}}//api/deposit/depositions/{{record_id}}/files
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 200
+}
