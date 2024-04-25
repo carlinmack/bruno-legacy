@@ -1,4 +1,4 @@
-## InvenioRDM REST API Collection
+## Legacy Zenodo API Collection
 
 ### Usage
 ```bash
