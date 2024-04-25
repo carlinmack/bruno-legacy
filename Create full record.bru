@@ -1,5 +1,5 @@
 meta {
-  name: 1 Create full record
+  name: Create full record
   type: http
   seq: 1
 }
@@ -152,4 +152,8 @@ body:json {
 
 vars:post-response {
   record_id: res.body.id
+}
+
+assert {
+  res.status: eq 201
 }

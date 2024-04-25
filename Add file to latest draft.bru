@@ -1,5 +1,5 @@
 meta {
-  name: 2 Add file to latest draft
+  name: Add file to latest draft
   type: http
   seq: 3
 }
@@ -17,6 +17,10 @@ headers {
 body:multipart-form {
   file: @file(test-file.txt)
   name: test-file.txt
+}
+
+assert {
+  res.status: eq 201
 }
 
 docs {
