@@ -1,0 +1,19 @@
+auth {
+  mode: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+docs {
+  Create an access token if you haven't already and add it to your environment as `access_token` 
+  
+  If you are developing locally, you should open the settings and disable SSL/TLS Certificate Verification
+}
+
+script:pre-request {
+  const now = new Date()
+  bru.setVar("now", now.toISOString());
+  bru.setVar("today", now.toISOString().split('T')[0]);
+}
